@@ -1,4 +1,4 @@
-FROM node:boron-alpine
+FROM node:boron
 
 RUN mkdir /temp
 COPY package.json /temp/package.json
@@ -9,11 +9,8 @@ RUN cd /temp && \
     cd ~ && \
     rm -rf /temp
 
-RUN apk update
-RUN apk add git
-RUN apk --no-cache add ca-certificates wget
-RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub
-RUN wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.25-r0/glibc-2.25-r0.apk
-RUN apk add glibc-2.25-r0.apk
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
+RUN apt-get install git
+RUN apt-get install -y libelf1
 RUN npm -v
 RUN node -v
