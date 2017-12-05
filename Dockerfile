@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:boron-alpine
 
 RUN mkdir /temp
 COPY package.json /temp/package.json
@@ -9,5 +9,7 @@ RUN cd /temp && \
     cd ~ && \
     rm -rf /temp
 
+RUN apk update
+RUN apk add libelf
 RUN npm -v
 RUN node -v

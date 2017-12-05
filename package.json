@@ -1,0 +1,19 @@
+{
+  "name": "docker-npm5-test-container",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Dockerfile",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheAdamizer/docker-npm5-test-container.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheAdamizer/docker-npm5-test-container/issues"
+  },
+  "homepage": "https://github.com/TheAdamizer/docker-npm5-test-container#readme"
+}
