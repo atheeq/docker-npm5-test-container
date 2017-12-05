@@ -10,6 +10,6 @@ RUN cd /temp && \
     rm -rf /temp
 
 RUN apk update
-RUN apk add libelf
+RUN apk add libelf git ca-certificates
 RUN npm -v
 RUN node -v
