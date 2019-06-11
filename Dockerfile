@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:carbon
 
 RUN mkdir /temp
 COPY package.json /temp/package.json
